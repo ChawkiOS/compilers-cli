@@ -1,0 +1,41 @@
+{
+    "name": "iRESTful/Authenticated",
+    "version": "master",
+    "license": "MIT",
+    "type": "rest-api",
+    "urls": {
+        "repository": "https://github.com/irestful-labs/authenticated-api",
+        "homepage": "https://github.com/irestful-labs/authenticated-api"
+    },
+    "authors": [
+        {
+            "name": "Steve Rodrigue",
+            "email": "steve@irestful.net",
+            "url": "http://irestful.com"
+        }
+    ],
+    "maintainer": "Steve Rodrigue",
+    "project": {
+        "code": {
+            "language": "PHP",
+            "file": "Authenticated.php"
+        },
+        "parents": {
+            "authentication_crud": {
+                "file": "../CRUD/authenticated.json",
+                "database": "crud_api"
+            }
+        },
+        "controllers": {
+            "authenticate": {
+                "pattern": "retrieve /authenticate",
+                "function": "authenticated_front_authenticate",
+                "test": "authenticated_front_authenticate_test",
+                "view": "text"
+            }
+        },
+        "databases": {
+            "crud_api": "rest_api"
+        }
+    }
+}

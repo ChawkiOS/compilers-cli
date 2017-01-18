@@ -1,0 +1,9 @@
+/.vagrant
+/vendor
+/reports
+/composer.phar
+.DS_Store
+*.log
+docker-compose.yml
+logs/*
+build/*
