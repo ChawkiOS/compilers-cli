@@ -12,10 +12,10 @@
          bootstrap="./vendor/autoload.php">
     <testsuites>
         <testsuite name="unit">
-            <directory suffix="Test.php">./src/iRESTful/CompilersCli/*/Tests/Tests/Unit</directory>
+            <directory suffix="Test.php">./src/iRESTful/CompilersCli/Tests/Tests/Unit</directory>
         </testsuite>
         <testsuite name="functional">
-            <directory suffix="Test.php">./src/iRESTful/CompilersCli/*/Tests/Tests/Functional</directory>
+            <directory suffix="Test.php">./src/iRESTful/CompilersCli/Tests/Tests/Functional</directory>
         </testsuite>
 
     </testsuites>
@@ -29,7 +29,7 @@
     <filter>
         <whitelist>
             <exclude>
-                <directory>./src/iRESTful/CompilersCli/*/Tests/Tests</directory>
+                <directory>./src/iRESTful/CompilersCli/Tests/Tests</directory>
             </exclude>
             <directory>./src</directory>
         </whitelist>

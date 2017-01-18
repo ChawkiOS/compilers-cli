@@ -32,7 +32,7 @@ if (isset($parseUrl['path'])) {
 try {
 
     $outputPath = realpath($outputPath);
-    $jsonFile = realpath(__DIR__.'/'.$jsonFile);
+    $jsonFile = realpath($jsonFile);
 
     $applicationFactory = new ConcreteCompilersCliApplicationFactory($baseUrl, $port, $outputPath);
     $applicationFactory->create()->execute($jsonFile);

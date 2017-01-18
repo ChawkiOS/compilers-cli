@@ -17,6 +17,9 @@
       "irestful-labs/https": "17.01.11",
       "ext-zip": "*"
     },
+    "bin": [
+        "bin/compiler.php"
+    ],
     "autoload": {
         "psr-0": {
             "iRESTful": "src"
