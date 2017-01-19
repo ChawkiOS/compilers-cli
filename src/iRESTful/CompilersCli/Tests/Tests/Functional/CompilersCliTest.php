@@ -17,7 +17,7 @@ final class CompilersCliTest extends \PHPUnit_Framework_TestCase {
 
     public function testCompile_CRUD_Success() {
 
-        $command = 'php /vagrant/bin/compiler.php http://127.0.0.1 '.$this->crud.' '.$this->output;
+        $command = 'php /vagrant/bin/irestful-api-compiler http://127.0.0.1 '.$this->crud.' '.$this->output;
         $output = shell_exec($command);
 
         //make sure everything is valid:
@@ -28,7 +28,7 @@ final class CompilersCliTest extends \PHPUnit_Framework_TestCase {
 
     public function testCompile_Custom_Success() {
 
-        $command = 'php /vagrant/bin/compiler.php http://127.0.0.1 '.$this->custom.' '.$this->output;
+        $command = 'php /vagrant/bin/irestful-api-compiler http://127.0.0.1 '.$this->custom.' '.$this->output;
         shell_exec($command);
 
         //make sure everything is valid:

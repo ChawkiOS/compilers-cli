@@ -1,5 +1,5 @@
 <?php
-include_once(__DIR__.'/../vendor/autoload.php');
+include_once(getcwd().'/vendor/autoload.php');
 use iRESTful\CompilersCLI\Infrastructure\Applications\ConcreteCompilerCLIApplication;
 use iRESTful\CompilersCli\Infrastructure\Factories\ConcreteCompilersCliApplicationFactory;
 use iRESTful\CompilersCli\Domain\Exceptions\CompilersCliException;
