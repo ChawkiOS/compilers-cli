@@ -14,11 +14,11 @@
     },
     "require": {
       "php": ">=7.0",
-      "irestful-labs/https": "17.01.11",
+      "irestful-labs/https": "17.01.23",
       "ext-zip": "*"
     },
     "bin": [
-        "bin/irestful-api-compiler"
+        "bin/steve-rodrigue-compilers-cli"
     ],
     "autoload": {
         "psr-0": {

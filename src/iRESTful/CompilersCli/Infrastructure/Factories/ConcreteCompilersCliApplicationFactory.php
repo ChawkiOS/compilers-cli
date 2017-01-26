@@ -3,6 +3,8 @@ namespace iRESTful\CompilersCli\Infrastructure\Factories;
 use iRESTful\CompilersCli\Domain\Applications\Factories\CompilersCliApplicationFactory;
 use iRESTful\Https\Infrastructure\Factories\CurlHttpApplicationFactory;
 use iRESTful\CompilersCli\Infrastructure\Applications\ConcreteCompilersCliApplication;
+use iRESTful\Https\Infrastructure\Adapters\ConcreteHttpResponseAdapter;
+use iRESTful\Https\Infrastructure\Adapters\ConcreteHttpResponseErrorAdapter;
 
 final class ConcreteCompilersCliApplicationFactory implements CompilersCliApplicationFactory {
     private $baseUrl;
@@ -17,7 +19,11 @@ final class ConcreteCompilersCliApplicationFactory implements CompilersCliApplic
     public function create() {
         $applicationFactory = new CurlHttpApplicationFactory($this->baseUrl);
         $application = $applicationFactory->create();
-        return new ConcreteCompilersCliApplication($application, $this->port, $this->outputPath);
+
+        $httpResponseErrorAdapter = new ConcreteHttpResponseErrorAdapter();
+        $httpResponseAdapter = new ConcreteHttpResponseAdapter($httpResponseErrorAdapter);
+
+        return new ConcreteCompilersCliApplication($application, $httpResponseAdapter, $this->port, $this->outputPath);
     }
 
 }

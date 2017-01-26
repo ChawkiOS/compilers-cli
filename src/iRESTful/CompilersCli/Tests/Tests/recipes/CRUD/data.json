@@ -1,0 +1,44 @@
+{
+    "user": {
+        "root": {
+            "name": "root",
+            "credentials": {
+                "username": "root",
+                "hashed_password": "$2y$10$UqvqAbFlpVoAMpiVx4h7aedYBRRYJQLn4LAllgOIH2b8.6blkgvzC"
+            },
+            "roles": [
+                "->root"
+            ]
+        }
+    },
+    "software": {
+        "root": {
+            "name": "admin",
+            "credentials": {
+                "username": "admin",
+                "hashed_password": "$2y$10$UqvqAbFlpVoAMpiVx4h7aedYBRRYJQLn4LAllgOIH2b8.6blkgvzC"
+            },
+            "roles": [
+                "->root"
+            ]
+        }
+    },
+    "role": {
+        "root": {
+            "title": "Root",
+            "description": "The root role can access everything.",
+            "permissions": [
+                "->read_write_delete"
+            ]
+        }
+    },
+    "permission": {
+        "read_write_delete": {
+            "title": "Read, Write and Delete objects.",
+            "description": "This permission enables a user to read, write and delete objects.",
+            "can_read": true,
+            "can_write": true,
+            "can_delete": true
+        }
+    }
+}

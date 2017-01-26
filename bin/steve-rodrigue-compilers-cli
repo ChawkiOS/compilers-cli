@@ -4,6 +4,34 @@ use iRESTful\CompilersCLI\Infrastructure\Applications\ConcreteCompilerCLIApplica
 use iRESTful\CompilersCli\Infrastructure\Factories\ConcreteCompilersCliApplicationFactory;
 use iRESTful\CompilersCli\Domain\Exceptions\CompilersCliException;
 
+$renderException = function(\Exception $exception) use(&$renderException) {
+
+    $generate = function(\Exception $exception, string $prefix = '') use(&$generate) {
+        $code = $exception->getCode();
+        $message = $exception->getMessage();
+
+        $subErrors = '';
+        $parentException = $exception->getPrevious();
+        if (!empty($parentException)) {
+            $subErrors = $generate($parentException, $prefix.'    ');
+        }
+
+        $line = $prefix.'->'.$code.':'.$message.PHP_EOL;
+        return $line.$subErrors;
+    };
+
+    $prefix = PHP_EOL.'***********'.PHP_EOL.'** ERROR **'.PHP_EOL.'***********'.PHP_EOL;
+    $message = $prefix.$generate($exception).PHP_EOL;
+    die($message);
+
+};
+
+$renderSuccess = function($message) {
+    $prefix = PHP_EOL.'*************'.PHP_EOL.'** SUCCESS **'.PHP_EOL.'*************'.PHP_EOL;
+    $message = $prefix.$message.\PHP_EOL.\PHP_EOL;
+    die($message);
+};
+
 $amount = count($argv);
 if (($amount != 3) && ($amount != 4)) {
     die(\PHP_EOL.'Invalid parameters.  Please refer to the documentation: https://github.com/irestful-labs/compilers-cli'.\PHP_EOL);
@@ -36,8 +64,8 @@ try {
 
     $applicationFactory = new ConcreteCompilersCliApplicationFactory($baseUrl, $port, $outputPath);
     $applicationFactory->create()->execute($jsonFile);
-    die(\PHP_EOL.'Done!  The code was generated in this directory: '.$outputPath.\PHP_EOL);
+    $renderSuccess('Done!  The code was generated in this directory: '.$outputPath);
 
 } catch (CompilersCliException $exception) {
-    die(\PHP_EOL.$exception->getMessage().\PHP_EOL);
+    $renderException($exception);
 }
