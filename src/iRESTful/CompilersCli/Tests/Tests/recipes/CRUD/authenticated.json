@@ -16,13 +16,22 @@
     ],
     "maintainer": "Steve Rodrigue",
     "project": {
-        "samples": "samples.json",
-        "data": "data.json",
         "code": {
             "language": "PHP",
             "file": "Authenticated.php"
         },
+        "samples": "samples.json",
+        "data": "data.json",
         "objects": {
+            "combotest": {
+                "database": "pdo",
+                "function": "constructor_comboTest_validateParameters",
+                "properties": {
+                    "endpoint|?": "endpoint",
+                    "api|?": "api",
+                    "registration|?": "registration"
+                }
+            },
             "endpoint": {
                 "database": "pdo",
                 "properties": {
@@ -112,22 +121,18 @@
                 }
             },
             "pattern": {
+                "function": "constructor_pattern_validateParameters",
                 "properties": {
                     "regex_pattern|?": "string",
                     "specific_uri|?": "uri"
-                },
-                "combos": [
-                    "regex_pattern+|specific_uri"
-                ]
+                }
             },
             "param_pattern": {
+                "function": "constructor_paramPattern_validateParameters",
                 "properties": {
                     "regex_pattern|?": "string",
                     "specific_value|?": "string"
-                },
-                "combos": [
-                    "regex_pattern+|specific_value"
-                ]
+                }
             },
             "credentials": {
                 "properties": {
@@ -164,7 +169,7 @@
                     "name": "string",
                     "max": 255
                 },
-                "function": "authenticated_crud_validateBaseUrl",
+                "function": "validateBaseUrl",
                 "converters": {
                     "database_to_object": {
                         "from": "string",
@@ -177,7 +182,7 @@
                     "name": "string",
                     "max": 255
                 },
-                "function": "authenticated_crud_validateUri",
+                "function": "validateUri",
                 "converters": {
                     "database_to_object": {
                         "from": "string",
@@ -190,7 +195,7 @@
                     "name": "string",
                     "max": 255
                 },
-                "function": "authenticated_crud_validateKeyname",
+                "function": "validateKeyname",
                 "converters": {
                     "database_to_object": {
                         "from": "string",
@@ -203,7 +208,7 @@
                     "name": "string",
                     "max": 255
                 },
-                "function": "authenticated_crud_validateHashedPassword",
+                "function": "validateHashedPassword",
                 "converters": {
                     "database_to_object": {
                         "from": "string",

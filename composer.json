@@ -18,7 +18,7 @@
       "ext-zip": "*"
     },
     "bin": [
-        "bin/steve-rodrigue-compilers-cli"
+        "bin/irestful-api-compiler"
     ],
     "autoload": {
         "psr-0": {
