@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b54cff1faf9b543b59346f0e5d56e04d",
+    "content-hash": "8f664733eb4b650b3bef1bd4c20774dc",
     "packages": [
         {
             "name": "irestful-labs/https",
-            "version": "17.01.23",
+            "version": "17.01.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irestful-labs/https.git",
-                "reference": "c4417c6bcab5f9801e75e322f47b0b2583cfd68d"
+                "reference": "02baddb558c03d4d35475337ec965d5fdc35a70a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irestful-labs/https/zipball/c4417c6bcab5f9801e75e322f47b0b2583cfd68d",
-                "reference": "c4417c6bcab5f9801e75e322f47b0b2583cfd68d",
+                "url": "https://api.github.com/repos/irestful-labs/https/zipball/02baddb558c03d4d35475337ec965d5fdc35a70a",
+                "reference": "02baddb558c03d4d35475337ec965d5fdc35a70a",
                 "shasum": ""
             },
             "require": {
-                "irestful-labs/libraries": "17.01.11",
+                "irestful-labs/libraries": "17.01.31",
                 "php": ">=7.0"
             },
             "require-dev": {
@@ -42,20 +42,20 @@
                 }
             ],
             "homepage": "http://irestful.net",
-            "time": "2017-01-29T00:50:32+00:00"
+            "time": "2017-02-01T06:32:03+00:00"
         },
         {
             "name": "irestful-labs/libraries",
-            "version": "17.01.11",
+            "version": "17.01.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irestful-labs/libraries.git",
-                "reference": "f52d3763168c1d7cb2b997f434c2bc6b43c4bec5"
+                "reference": "3a4e5607427d9b02b14c2704d0cbb02531b9dba4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irestful-labs/libraries/zipball/f52d3763168c1d7cb2b997f434c2bc6b43c4bec5",
-                "reference": "f52d3763168c1d7cb2b997f434c2bc6b43c4bec5",
+                "url": "https://api.github.com/repos/irestful-labs/libraries/zipball/3a4e5607427d9b02b14c2704d0cbb02531b9dba4",
+                "reference": "3a4e5607427d9b02b14c2704d0cbb02531b9dba4",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
                 }
             ],
             "homepage": "http://irestful.net",
-            "time": "2017-01-11T00:45:40+00:00"
+            "time": "2017-02-01T06:18:26+00:00"
         },
         {
             "name": "ramsey/uuid",
