@@ -29,9 +29,13 @@
         "controllers": {
             "authenticate": {
                 "pattern": "retrieve /authenticate",
-                "function": "authenticated_front_authenticate",
-                "test": "authenticated_front_authenticate_test",
+                "function": "authenticate",
                 "view": "text"
+            },
+            "authenticate_json": {
+                "pattern": "retrieve /authenticate.json",
+                "function": "authenticate_json",
+                "view": "json"
             }
         },
         "databases": {

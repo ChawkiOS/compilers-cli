@@ -1,6 +1,6 @@
 <?php
 
-function authenticated_front_authenticate($service, $httpRequest) {
+function authenticate($service, $httpRequest) {
 
     print_r($service->getRepository()->getEntityPartialSet()->retrieve([
         'container' => 'role',
@@ -11,8 +11,10 @@ function authenticated_front_authenticate($service, $httpRequest) {
 
 };
 
-function authenticated_front_authenticate_test($service, $phpunit) {
+function authenticate_json($service, $httpRequest) {
 
-
+    return [
+        'some' => 'json'
+    ];
 
 };
