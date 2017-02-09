@@ -1,4 +1,4 @@
-<?php
+r<?php
 
 function constructor_comboTest_validateParameters($endpoint = null, $api = null, $registration = null) {
 
