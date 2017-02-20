@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1f247a32c6c3d18762e9b1697aba436",
+    "content-hash": "bede5c8b0f350199718695fdbc0a75e9",
     "packages": [
         {
             "name": "irestful-labs/https",
-            "version": "17.02.07",
+            "version": "17.02.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irestful-labs/https.git",
-                "reference": "b3db4ba45baf8a48b7e3d304df984dd8c9228185"
+                "reference": "5e2694ac1c19e096ddfa5334f9536b25776dd9b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irestful-labs/https/zipball/b3db4ba45baf8a48b7e3d304df984dd8c9228185",
-                "reference": "b3db4ba45baf8a48b7e3d304df984dd8c9228185",
+                "url": "https://api.github.com/repos/irestful-labs/https/zipball/5e2694ac1c19e096ddfa5334f9536b25776dd9b0",
+                "reference": "5e2694ac1c19e096ddfa5334f9536b25776dd9b0",
                 "shasum": ""
             },
             "require": {
-                "irestful-labs/libraries": "17.01.31",
+                "irestful-labs/libraries": "17.02.19",
                 "php": ">=7.0"
             },
             "require-dev": {
@@ -42,20 +42,20 @@
                 }
             ],
             "homepage": "http://irestful.net",
-            "time": "2017-02-07T18:50:28+00:00"
+            "time": "2017-02-20T01:16:11+00:00"
         },
         {
             "name": "irestful-labs/libraries",
-            "version": "17.01.31",
+            "version": "17.02.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irestful-labs/libraries.git",
-                "reference": "3a4e5607427d9b02b14c2704d0cbb02531b9dba4"
+                "reference": "cd70824435a2ae595d1f88b1d6e767d71ae30264"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irestful-labs/libraries/zipball/3a4e5607427d9b02b14c2704d0cbb02531b9dba4",
-                "reference": "3a4e5607427d9b02b14c2704d0cbb02531b9dba4",
+                "url": "https://api.github.com/repos/irestful-labs/libraries/zipball/cd70824435a2ae595d1f88b1d6e767d71ae30264",
+                "reference": "cd70824435a2ae595d1f88b1d6e767d71ae30264",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
                 }
             ],
             "homepage": "http://irestful.net",
-            "time": "2017-02-01T06:18:26+00:00"
+            "time": "2017-02-20T01:02:38+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -1360,16 +1360,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.2.3",
+            "version": "v3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "e1718c6bf57e1efbb8793ada951584b2ab27775b"
+                "reference": "9724c684646fcb5387d579b4bfaa63ee0b0c64c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/e1718c6bf57e1efbb8793ada951584b2ab27775b",
-                "reference": "e1718c6bf57e1efbb8793ada951584b2ab27775b",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/9724c684646fcb5387d579b4bfaa63ee0b0c64c8",
+                "reference": "9724c684646fcb5387d579b4bfaa63ee0b0c64c8",
                 "shasum": ""
             },
             "require": {
@@ -1411,7 +1411,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-21T17:06:35+00:00"
+            "time": "2017-02-16T22:46:52+00:00"
         },
         {
             "name": "webmozart/assert",

@@ -14,7 +14,7 @@
     },
     "require": {
       "php": ">=7.0",
-      "irestful-labs/https": "17.02.07",
+      "irestful-labs/https": "17.02.19",
       "ext-zip": "*"
     },
     "bin": [
