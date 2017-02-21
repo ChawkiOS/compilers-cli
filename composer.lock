@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bede5c8b0f350199718695fdbc0a75e9",
+    "content-hash": "ee98eb99be3737da35171dcf195d044a",
     "packages": [
         {
             "name": "irestful-labs/https",
-            "version": "17.02.19",
+            "version": "17.02.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irestful-labs/https.git",
-                "reference": "5e2694ac1c19e096ddfa5334f9536b25776dd9b0"
+                "reference": "91510859bd4b74053a03cee61bc20d8255c8fe45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irestful-labs/https/zipball/5e2694ac1c19e096ddfa5334f9536b25776dd9b0",
-                "reference": "5e2694ac1c19e096ddfa5334f9536b25776dd9b0",
+                "url": "https://api.github.com/repos/irestful-labs/https/zipball/91510859bd4b74053a03cee61bc20d8255c8fe45",
+                "reference": "91510859bd4b74053a03cee61bc20d8255c8fe45",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +42,7 @@
                 }
             ],
             "homepage": "http://irestful.net",
-            "time": "2017-02-20T01:16:11+00:00"
+            "time": "2017-02-20T21:19:22+00:00"
         },
         {
             "name": "irestful-labs/libraries",

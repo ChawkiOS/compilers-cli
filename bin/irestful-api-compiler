@@ -9,6 +9,8 @@ $renderException = function(\Exception $exception) use(&$renderException) {
     $generate = function(\Exception $exception, string $prefix = '') use(&$generate) {
         $code = $exception->getCode();
         $message = $exception->getMessage();
+        $line = $exception->getLine();
+        $file = $exception->getFileName();
 
         $subErrors = '';
         $parentException = $exception->getPrevious();
@@ -16,7 +18,7 @@ $renderException = function(\Exception $exception) use(&$renderException) {
             $subErrors = $generate($parentException, $prefix.'    ');
         }
 
-        $line = $prefix.'->'.$code.':'.$message.PHP_EOL;
+        $line = $prefix.'->'.$code.':'.$message.' -- Line: '.$line.' -- File: '.$file.PHP_EOL;
         return $line.$subErrors;
     };
 
