@@ -10,7 +10,7 @@ $renderException = function(\Exception $exception) use(&$renderException) {
         $code = $exception->getCode();
         $message = $exception->getMessage();
         $line = $exception->getLine();
-        $file = $exception->getFileName();
+        $file = $exception->getFile();
 
         $subErrors = '';
         $parentException = $exception->getPrevious();
