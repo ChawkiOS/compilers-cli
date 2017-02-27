@@ -3,10 +3,7 @@
     "version": "master",
     "license": "MIT",
     "type": "rest-api",
-    "urls": {
-        "repository": "https://github.com/irestful-labs/authenticated-api",
-        "homepage": "https://github.com/irestful-labs/authenticated-api"
-    },
+    "url": "https://github.com/irestful-labs/authenticated-api",
     "authors": [
         {
             "name": "Steve Rodrigue",

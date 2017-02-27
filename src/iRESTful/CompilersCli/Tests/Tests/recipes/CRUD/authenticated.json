@@ -3,10 +3,7 @@
     "version": "master",
     "license": "MIT",
     "type": "crud-rest-api",
-    "urls": {
-        "repository": "https://github.com/irestful-labs/test-crud-authenticated",
-        "homepage": "https://github.com/irestful-labs/test-crud-authenticated"
-    },
+    "url": "https://github.com/irestful-labs/test-crud-authenticated",
     "authors": [
         {
             "name": "Steve Rodrigue",
