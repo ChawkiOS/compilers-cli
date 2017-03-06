@@ -1,0 +1,10 @@
+/vendor
+/reports
+/logs
+/composer.phar
+.DS_Store
+*.log
+/production/vendor
+/production/reports
+/production/composer.phar
+/production/.DS_Store

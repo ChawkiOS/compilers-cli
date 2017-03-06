@@ -127,15 +127,20 @@ final class Watch extends Command {
         };
 
         $execute = function($action, $command) use(&$output) {
-            $output->writeLn(\PHP_EOL."+++++++++++++++++++++++++++++++++++++++++++++++++++++".\PHP_EOL);
-            $output->writeLn("-> ".$action." +++ Executing: ".$command.\PHP_EOL);
-            $output->writeLn("+++++++++++++++++++++++++++++++++++++++++++++++++++++".PHP_EOL);
-            system($command);
-            $output->writeLn("+++++++++++++++++++++++++++++++++++++++++++++++++++++".PHP_EOL);
+            $commandOutput = [];
+            exec($command, $commandOutput);
+            $message = $this->outputAdapter->fromCommandToOutput([
+                'action' => $action,
+                'command' => $command,
+                'command_output' => $commandOutput
+            ]);
+
+            $output->write($message->get());
         };
 
         $compileOne = function($path, $compiler, $compilerServer, $scriptBasePath, $compileTo, $recipeFileName) use( &$execute) {
-            $command = $compiler.' compile '.$compilerServer.' '.$scriptBasePath.'/'.$path.'/'.$recipeFileName.' '.$compileTo.'/'.$path.';';
+            $compileToPath = (empty($path)) ? $compileTo : $compileTo.'/'.$path;
+            $command = $compiler.' compile '.$compilerServer.' '.$scriptBasePath.'/'.$path.'/'.$recipeFileName.' '.$compileToPath.';';
             $execute('Compiling', $command);
         };
 
@@ -151,7 +156,7 @@ final class Watch extends Command {
 
                 $recipeFileName = $getRecipeFileName($filePath);
                 $directoryPath = str_replace('/'.$recipeFileName, '', $filePath);
-                $onePath = ($directoryPath == $commonBasePath) ? '/' : str_replace($commonBasePath.'/', '', $directoryPath);
+                $onePath = ($directoryPath == $commonBasePath) ? '' : str_replace($commonBasePath.'/', '', $directoryPath);
 
                 if (!isset($hashes[$onePath])) {
                     $hashes[$onePath] = $hashDirectory($directoryPath);

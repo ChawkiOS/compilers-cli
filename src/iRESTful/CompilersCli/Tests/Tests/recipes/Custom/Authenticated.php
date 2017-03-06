@@ -7,8 +7,7 @@ function authenticate($service, $httpRequest) {
         'index' => 0,
         'amount' => 22
     ]));
-    die();
-    
+    die();    
 };
 
 function authenticate_json($service, $httpRequest) {
