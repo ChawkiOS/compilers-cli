@@ -19,7 +19,7 @@ This example would watch 1 application for modifications.  If modifications are 
 php bin/irestful watch url sources output
 
 //example:
-php bin/irestful watch http://127.0.0.1:8080 ./src/iRESTful/CompilersCli/Tests/Tests/recipes/CRUD/authenticated.json ./bin2
+php bin/irestful watch http://127.0.0.1:8080 ./src/iRESTful/CompilersCli/Tests/Tests/recipes/CRUD/authenticated.json ./bin
 ```
 
 ## Watching multiple applications:
@@ -29,5 +29,5 @@ This example would watch 2 applications for modifications.  If modifications are
 php bin/irestful watch url sources output
 
 //example:
-php bin/irestful watch http://127.0.0.1:8080 ./src/iRESTful/CompilersCli/Tests/Tests/recipes/CRUD/authenticated.json,./src/iRESTful/CompilersCli/Tests/Tests/recipes/Custom/authenticated.json ./bin2
+php bin/irestful watch http://127.0.0.1:8080 ./src/iRESTful/CompilersCli/Tests/Tests/recipes/CRUD/authenticated.json,./src/iRESTful/CompilersCli/Tests/Tests/recipes/Custom/authenticated.json ./bin
 ```
