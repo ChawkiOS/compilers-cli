@@ -15,10 +15,11 @@
     "require": {
       "php": ">=7.0",
       "irestful-labs/https": "17.02.20",
-      "ext-zip": "*"
+      "ext-zip": "*",
+      "symfony/console": "v2.6.0"
     },
     "bin": [
-        "bin/irestful-api-compiler"
+        "bin/irestful"
     ],
     "autoload": {
         "psr-0": {

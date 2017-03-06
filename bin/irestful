@@ -1,0 +1,8 @@
+<?php
+include_once(getcwd().'/vendor/autoload.php');
+use Symfony\Component\Console\Application;
+use iRESTful\CompilersCli\Infrastructure\Commands\Compile;
+
+$application = new Application();
+$application->add(new Compile());
+$application->run();
