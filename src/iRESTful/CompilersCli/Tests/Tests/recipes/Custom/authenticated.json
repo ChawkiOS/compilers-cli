@@ -8,10 +8,13 @@
         {
             "name": "Steve Rodrigue",
             "email": "steve@irestful.net",
-            "url": "http://irestful.com"
+            "url": "http://irestful.com",
+            "roles": [
+                "Maintainer",
+                "Developer"
+            ]
         }
     ],
-    "maintainer": "Steve Rodrigue",
     "project": {
         "code": {
             "language": "PHP",
