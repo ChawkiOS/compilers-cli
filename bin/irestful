@@ -2,7 +2,9 @@
 include_once(getcwd().'/vendor/autoload.php');
 use Symfony\Component\Console\Application;
 use iRESTful\CompilersCli\Infrastructure\Commands\Compile;
+use iRESTful\CompilersCli\Infrastructure\Commands\Watch;
 
 $application = new Application();
 $application->add(new Compile());
+$application->add(new Watch(__FILE__));
 $application->run();

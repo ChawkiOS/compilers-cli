@@ -1,14 +1,14 @@
 <?php
-namespace iRESTful\CompilersCli\Tests\Tests\Functional;
+namespace iRESTful\CompilersCli\Tests\Tests\Functional\Commands;
 
-final class CompilersCliTest extends \PHPUnit_Framework_TestCase {
+final class CompileTest extends \PHPUnit_Framework_TestCase {
     private $output;
     private $crud;
     private $custom;
     public function setUp() {
         $this->output = '/tmp/build/'.uniqid('compilerscli');
-        $this->crud = realpath(__DIR__.'/../recipes/CRUD/authenticated.json');
-        $this->custom = realpath(__DIR__.'/../recipes/Custom/authenticated.json');
+        $this->crud = realpath(__DIR__.'/../../recipes/CRUD/authenticated.json');
+        $this->custom = realpath(__DIR__.'/../../recipes/Custom/authenticated.json');
     }
 
     public function tearDown() {
