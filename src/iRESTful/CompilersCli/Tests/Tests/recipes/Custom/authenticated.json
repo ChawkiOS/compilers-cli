@@ -2,7 +2,7 @@
     "name": "iRESTful/Authenticated",
     "version": "master",
     "license": "MIT",
-    "type": "rest-api",
+    "type": "custom-rest-api",
     "url": "https://github.com/irestful-labs/authenticated-api",
     "authors": [
         {

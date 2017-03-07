@@ -4,9 +4,11 @@ use Symfony\Component\Console\Application;
 use iRESTful\CompilersCli\Infrastructure\Commands\Compile;
 use iRESTful\CompilersCli\Infrastructure\Commands\Watch;
 use iRESTful\CompilersCli\Infrastructure\Commands\Build;
+use iRESTful\CompilersCli\Infrastructure\Commands\Push;
 
 $application = new Application();
 $application->add(new Compile());
 $application->add(new Watch(__FILE__));
 $application->add(new Build(__FILE__));
+$application->add(new Push(__FILE__));
 $application->run();

@@ -64,4 +64,27 @@ final class ConcreteOutputAdapter implements OutputAdapter {
 
     }
 
+    public function fromCommandsToOutput(array $commands) {
+
+        if (!isset($commands['action'])) {
+            throw new OutputException('The action keyname is mandatory in order to convert data to an Output object.');
+        }
+
+        if (!isset($commands['commands'])) {
+            throw new OutputException('The commands keyname is mandatory in order to convert data to an Output object.');
+        }
+
+        $message = \PHP_EOL."****************************************************".\PHP_EOL;
+        $message .= "<fg=white;bg=blue;options=bold>".$commands['action']."</> *** Run these commands manually</>".\PHP_EOL;
+        $message .= "****************************************************".\PHP_EOL;
+
+        foreach($commands['commands'] as $oneCommand) {
+            $message .= $oneCommand.\PHP_EOL;
+        }
+
+        $message .= \PHP_EOL.\PHP_EOL;
+        return new ConcreteOutput($message);
+
+    }
+
 }

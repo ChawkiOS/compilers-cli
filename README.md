@@ -35,5 +35,5 @@ php ./bin/irestful watch http://127.0.0.1:8080 ./src/iRESTful/CompilersCli/Tests
 //build:
 clear; php ./bin/irestful build http://127.0.0.1:8080 ./src/iRESTful/CompilersCli/Tests/Tests/recipes/CRUD/authenticated.json,./src/iRESTful/CompilersCli/Tests/Tests/recipes/Custom/authenticated.json ./build
 
-//test:
-clear; php ./bin/irestful test http://127.0.0.1:8080 ./build
+//push:
+clear; php ./bin/irestful push ./src
