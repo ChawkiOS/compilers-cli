@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provider :virtualbox do |vb|
     vb.name = "irestful-compilers-cli"
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
     vb.customize ["modifyvm", :id, "--cpus", "8"]
     vb.customize ["modifyvm", :id, "--ostype", "Ubuntu_64"]
   end

@@ -59,7 +59,7 @@ final class ConcreteOutputAdapter implements OutputAdapter {
             $message .= "    ".$oneCommandOutputLine.\PHP_EOL;
         }
 
-        $message .= "****************************************************".\PHP_EOL;
+        $message .= \PHP_EOL.\PHP_EOL;
         return new ConcreteOutput($message);
 
     }
