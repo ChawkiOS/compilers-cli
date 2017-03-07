@@ -30,11 +30,62 @@ final class Watch extends Command {
         // the "--help" option
         ->setHelp('This command allows someone to watch an application')
         ->addArgument('url', InputArgument::REQUIRED, 'The url of the compiler API.')
-        ->addArgument('sources', InputArgument::REQUIRED, 'The comma separated paths of the json source files.')
+        ->addArgument('source', InputArgument::REQUIRED, 'The base directory path that contains the json source application files.')
         ->addArgument('output', InputArgument::REQUIRED, 'The path of the output folder.  The compiled code will be saved in this folder, using the same folder hierarchy as the sources.');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output) {
+
+        $getJsonFiles = function(string $source) {
+
+            $getFiles = function(string $basePath) use(&$getFiles) {
+
+                if (!file_exists($basePath) || !is_dir($basePath)) {
+                    return [];
+                }
+
+                $output = [];
+                $resource = opendir($basePath);
+                while (($file = readdir($resource)) !== false) {
+                    if (($file == '.') || ($file == '..')) {
+                        continue;
+                    }
+
+                    $path = realpath($basePath.'/'.$file);
+                    if (is_dir($path)) {
+                        $output = array_merge($output, $getFiles($path));
+                        continue;
+                    }
+
+                    $output[] = $path;
+
+                }
+
+                return $output;
+            };
+
+            $output = [];
+            $files = $getFiles($source);
+            foreach($files as $oneFile) {
+                $data = @json_decode(file_get_contents($oneFile), true);
+                if (empty($data)) {
+                    continue;
+                }
+
+                if (!isset($data['type'])) {
+                    continue;
+                }
+
+                if (($data['type'] != 'crud-rest-api') && ($data['type'] != 'custom-rest-api') && ($data['type'] != 'hateaos-rest-api')) {
+                    continue;
+                }
+
+                $output[] = $oneFile;
+            }
+
+            return $output;
+
+        };
 
         $getCommonBasePath = function(array $jsonFiles) {
 
@@ -144,7 +195,9 @@ final class Watch extends Command {
             $execute('Compiling', $command);
         };
 
-        $jsonFiles = explode(',', $input->getArgument('sources'));
+        $baseDirectory = $input->getArgument('source');
+        $jsonFiles = $getJsonFiles($baseDirectory);
+
         $url = $input->getArgument('url');
         $outputDirectory = $input->getArgument('output');
         $commonBasePath = $getCommonPath($jsonFiles);

@@ -6,7 +6,7 @@ function constructor_comboTest_validateParameters($endpoint = null, $api = null,
     if ($amount != 1) {
         throw new \Exception('There must be either an endpoint, an api or a registration.  '.$amount.' given.');
     }
-
+    
 };
 
 function constructor_pattern_validateParameters($regexPattern = null, $specificUri = null) {
